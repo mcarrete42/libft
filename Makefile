@@ -6,11 +6,11 @@
 #    By: mcarrete <mcarrete@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/20 21:36:15 by mcarrete          #+#    #+#              #
-#    Updated: 2019/11/05 18:36:35 by mcarrete         ###   ########.fr        #
+#    Updated: 2019/11/05 21:07:16 by mcarrete         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC 		= main.c ft_bzero.c
+SRC 		= main.c ft_memcpy.c
 OBJ 		= ${SRC:.c=.o}
 BINARY 		= libft.a
 LIB			= lib.h

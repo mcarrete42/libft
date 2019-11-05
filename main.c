@@ -6,7 +6,7 @@
 /*   By: mcarrete <mcarrete@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 18:42:59 by mcarrete          #+#    #+#             */
-/*   Updated: 2019/11/05 19:55:40 by mcarrete         ###   ########.fr       */
+/*   Updated: 2019/11/05 21:07:33 by mcarrete         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ int	main(void)
 	ft_memset(str,'s', 2);
 	printf("%s", str);*/
 
-	/* BZERO
+	/*/BZERO
 	char s[10] = "123456";
 	i = 0;
 	//bzero(s, 0);
-	ft_bzero(s, 0);
+	ft_bzero(s, 2);
 	while (i < 7)
 	{
 		write (1, &s[i], 1);
@@ -33,6 +33,13 @@ int	main(void)
 	}
 	printf("\nhola");*/
 
+	/* MEMCPY*/
+	char dst[10] = "123456789";
+	char src[10] = "abcdefghij";
+	i = 0;
+	//memcpy(dst, src, 2);
+	ft_memcpy(dst, src, 2);
+	printf("my dest with copied content: %s\n", dst);
 
 	return (0);
 }
