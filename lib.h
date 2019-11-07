@@ -10,9 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+//#include <unistd.h>
 #include <string.h>
-#include <strings.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -22,5 +21,11 @@
 void	*ft_memset(void *str, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
+int     ft_strlen(const char *str);
+int     ft_isalpha(const char *str);
+int     ft_isdigit(const char *str);
+int     ft_isalnum(const char *str);
+int     ft_isascii(const char *str);
+int     ft_isprint(const char *str);
 
 #endif
