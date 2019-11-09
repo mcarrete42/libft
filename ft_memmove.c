@@ -11,22 +11,28 @@
 /* ************************************************************************** */
 
 #include "lib.h"
-
-void    *ft_memmove(void *str1, const void *str2, size_t n);
+//es un copy de ft_memcpy cual es la dif?
+void	*ft_memmove(void *str1, const void *str2, size_t n)
 {
 	unsigned long	i;
-	unsigned char	value;
-	const char		*ptrsrc;
-	char			*ptrdst;
+	const char		*ptrstr2;
+	char			*ptrstr1;
+	char			*temp;
 
-	ptrsrc = src;
-	ptrdst = dst;
-	value = n;
+	*temp = temp[n];
+	ptrstr2 = str2;
+	ptrstr1 = str1;
 	i = 0;
-	while (i < n && ptrdst[i] != '\0')
+	while (i < n)
 	{
-		ptrdst[i] = ptrsrc[i];
+		temp[i] = ptrstr2[i];
 		i++;
 	}
-	return (dst);
+	i = 0;
+	while (i < n && ptrstr1[i] != '\0')
+	{
+		ptrstr1[i] = temp[i];
+		i++;
+	}
+	return (str1);
 }

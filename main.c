@@ -44,10 +44,17 @@ int	main(void)
 	printf("%s\n", dst);
 
 		// MEMCCPY
-	char *ptrmemccpy;
-	printf("03a - ft_memccpy:\n ");
+	printf("04 - ft_memccpy:\n");
 	char dstccpy[10] = "123456789";
 	char srcccpy[10] = "abcdefghij";
+	//memccpy(dstccpy, srcccpy, 'a', 2);
+	ft_memccpy(dstccpy, srcccpy, 'a', 2);
+	printf("%s\n", dstccpy);
+
+	// MEMMOVE
+	printf("05 - ft_memmove:\n");
+	char dstmv[10] = "123456789";
+	char srcmv[10] = "abcdefghij";
 	//memccpy(dstccpy, srcccpy, 'a', 2);
 	ft_memccpy(dstccpy, srcccpy, 'a', 2);
 	printf("%s\n", dstccpy);
