@@ -21,7 +21,7 @@ char ft_tolower(char *str)
     i = 0;
     while (strptr[i] != 0)
     {
-        if (strptr[i] >= 'a' && strptr[i] <= 'z')
+        if (strptr[i] >= 'A' && strptr[i] <= 'Z')
             strptr[i] = strptr[i] + 32; //check si es + o - 32
       i++;
     }
