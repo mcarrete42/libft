@@ -14,15 +14,17 @@
 
 int	main(void)
 {
+
+/*
 	int i;
-	/* MEMSET */
+	// MEMSET
 	printf("01 - ft_memset:\n ");
 	char str[10] = "   hola!";
 	//memset(str,'s', 2);
 	ft_memset(str,'s', 2);
 	printf("%s\n", str);
 
-	/*/BZERO */
+	//BZERO
 	printf("02 - ft_bzero:\n ");
 	char s[10] = "123456";
 	i = 0;
@@ -35,31 +37,35 @@ int	main(void)
 	}
 	printf("\n");
 
+*/
 	// MEMCPY
-	printf("03 - ft_memcpy:\n ");
-	char dst[10] = "123456789";
-	char src[10] = "abcdefghij";
-	//memcpy(dst, src, 2);
-	ft_memcpy(dst, src, 2);
-	printf("%s\n", dst);
+	printf("03 - ft_memcpy:\n");
+	//char dst[10] = "123456789";
+	char src[10] = "abc";
+	memcpy(src + 2, src, 2);
+	//ft_memcpy(dst, src, 2);
+	printf("%s\n", src);
 
-		// MEMCCPY
+/*
+	// MEMCCPY
 	printf("04 - ft_memccpy:\n");
 	char dstccpy[10] = "123456789";
 	char srcccpy[10] = "abcdefghij";
 	//memccpy(dstccpy, srcccpy, 'a', 2);
 	ft_memccpy(dstccpy, srcccpy, 'a', 2);
 	printf("%s\n", dstccpy);
+*/
 
 	// MEMMOVE
 	printf("05 - ft_memmove:\n");
-	char dstmv[10] = "123456789";
-	char srcmv[10] = "abcdefghij";
-	//memccpy(dstccpy, srcccpy, 'a', 2);
-	ft_memccpy(dstccpy, srcccpy, 'a', 2);
-	printf("%s\n", dstccpy);
+	//char dstmv[10] = "123456789";
+	char srcmv[10] = "abc";
+	memmove(srcmv + 2, srcmv, 2);
+	//ft_memccpy(dstmv, srcmv, 2);
+	printf("%s\n", src);
 
-	// STRLEN revisar!!!!
+/*
+	STRLEN revisar!!!!
 	printf("08 - ft_strlen:\n ");
 	char lenstr[] = "1234567";
 	//int a = strlen(lenstr);
@@ -110,10 +116,19 @@ int	main(void)
 	printf("%s", upperstr);
 
 	// TOLOWER revisar!!!!
-	printf("14 - ft_tolower:\n ");
+	printf("15 - ft_tolower:\n ");
 	char lowerstr[] = "ESTO SE TIENE QUE ver en minuscula";
 	//tolower(lowerstr);
 	ft_tolower(lowerstr);
 	printf("%s", lowerstr);
 	return (0);
+*/
+
+//	ATOI
+	printf("22 - ft_atoi:\n");
+	char stratoi[] = "    -567dfgd78";
+	int atoiresult;
+	atoiresult = ft_atoi(stratoi);
+	//printf("%d", atoi(stratoi));
+	printf("%d", atoiresult);
 }

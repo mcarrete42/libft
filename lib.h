@@ -29,5 +29,5 @@ int     ft_isdigit(const char *str);
 int     ft_isalnum(const char *str);
 int     ft_isascii(const char *str);
 int     ft_isprint(const char *str);
-
+int     ft_atoi(const char *nptr);
 #endif
