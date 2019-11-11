@@ -6,12 +6,11 @@
 #    By: mcarrete <mcarrete@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/20 21:36:15 by mcarrete          #+#    #+#              #
-#    Updated: 2019/11/05 21:07:16 by mcarrete         ###   ########.fr        #
+#    Updated: 2019/11/11 20:09:18 by mcarrete         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC 		= main.c ft_memcpy.c ft_bzero.c ft_memset.c ft_strlen.c ft_isalpha.c
-				ft_digit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_toupper.c ft_tolower.c
+SRC 		= main.c ft_strlen.c
 OBJ 		= ${SRC:.c=.o}
 BINARY 		= libft.a
 LIB			= lib.h

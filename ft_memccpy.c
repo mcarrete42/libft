@@ -6,7 +6,7 @@
 /*   By: mcarrete <mcarrete@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 20:18:57 by mcarrete          #+#    #+#             */
-/*   Updated: 2019/11/05 21:19:58 by mcarrete         ###   ########.fr       */
+/*   Updated: 2019/11/11 20:02:02 by mcarrete         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	value = n;
 	i = 0;
 
-	while (i < n && ptrdst[i] != '\0')
+	while (i < n && ptrdst != 0)
 	{
 		ptrdst[i] = ptrsrc[i];
-		if (ptrsrc[i] != (char)c)  // cuando encuentra c para de copiar
-			break;
+		if (ptrsrc[i] == (char)c)  // cuando encuentra c para de copiar
+			break ;
 		i++;
 	}
 	if (ptrsrc[i] == '\0')  //no ha encontrado c antes del final

@@ -6,23 +6,18 @@
 /*   By: mcarrete <mcarrete@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 09:21:42 by mcarrete          #+#    #+#             */
-/*   Updated: 2019/11/07 09:21:42 by mcarrete         ###   ########.fr       */
+/*   Updated: 2019/11/11 20:15:51 by mcarrete         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lib.h"
 
-int     ft_strlen(const char *str)  //chequear prototipo en el man y cambiarlo en lib.h tmb
+size_t		ft_strlen(const char *s)
 {
-    int i;
-    char *strptr;
+	unsigned long	i;
 
-    strptr = str;
-    i = 0;
-    while (strptr[i] != 0)
-    {
-        i++;
-    }
-
-    return (i);
+	i = 0;
+	while (s[i] != 0)
+		i++;
+	return (i);
 }
