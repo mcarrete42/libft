@@ -3,27 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcarrete <mcarrete@mcarrete.42.fr>         +#+  +:+       +#+        */
+/*   By: mcarrete <mcarrete@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 11:09:52 by mcarrete          #+#    #+#             */
-/*   Updated: 2019/11/07 11:09:52 by mcarrete         ###   ########.fr       */
+/*   Updated: 2019/11/12 20:16:45 by mcarrete         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lib.h"
+#include "libft.h"
 
-char ft_tolower(char *str)
+int		ft_tolower(int c)
 {
-    int i;
-    char *strptr;
-
-    strptr = str;
-    i = 0;
-    while (strptr[i] != 0)
-    {
-        if (strptr[i] >= 'A' && strptr[i] <= 'Z')
-            strptr[i] = strptr[i] + 32; //check si es + o - 32
-      i++;
-    }
-    return (str);
+	if (ft_isupper(c) == 1)
+		return (c + 32);
+    return (c);
 }

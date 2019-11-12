@@ -6,11 +6,11 @@
 /*   By: mcarrete <mcarrete@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 20:18:57 by mcarrete          #+#    #+#             */
-/*   Updated: 2019/11/11 20:02:18 by mcarrete         ###   ########.fr       */
+/*   Updated: 2019/11/12 18:12:13 by mcarrete         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lib.h"
+#include "libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {

@@ -6,11 +6,11 @@
 /*   By: mcarrete <mcarrete@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 18:42:59 by mcarrete          #+#    #+#             */
-/*   Updated: 2019/11/11 20:25:23 by mcarrete         ###   ########.fr       */
+/*   Updated: 2019/11/12 19:02:27 by mcarrete         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lib.h"
+#include "libft.h"
 
 int		main(void)
 {
@@ -68,9 +68,9 @@ int		main(void)
 */
 	// ISALPHA revisar esta mal!!!!
 	printf("09 - ft_isalpha:\n");
-	char alphstr[] = "abcd";
+	int c = 'a';
 	//int a = isalpha(alphstr);
-	int a = ft_isalpha(alphstr);
+	int a = ft_isalpha(c);
 	printf("%d", a);
 
 /*

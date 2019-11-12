@@ -6,11 +6,11 @@
 /*   By: mcarrete <mcarrete@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 18:09:44 by mcarrete          #+#    #+#             */
-/*   Updated: 2019/11/05 21:00:04 by mcarrete         ###   ########.fr       */
+/*   Updated: 2019/11/12 18:12:50 by mcarrete         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lib.h"
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
