@@ -6,7 +6,7 @@
 /*   By: mcarrete <mcarrete@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 18:42:59 by mcarrete          #+#    #+#             */
-/*   Updated: 2019/11/12 19:02:27 by mcarrete         ###   ########.fr       */
+/*   Updated: 2019/11/14 19:15:21 by mcarrete         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,15 +43,15 @@ int		main(void)
 	//memcpy(dst, src, 2);
 	ft_memcpy(dst, src, 2);
 	printf("%s\n", dst);
-
+*/
 	// MEMCCPY (revisado)
 	printf("04 - ft_memccpy:\n");
-	char dstccpy[10] = "123456789";
-	char srcccpy[10] = "abcdefghij";
+	char *r2;
+	char srcccpy[] = "test basic du memccpy !";
 	//memccpy(dstccpy, srcccpy, 'a', 2);
-	ft_memccpy(dstccpy, srcccpy, 'a', 2);
-	printf("%s\n", dstccpy);
-
+	r2 = ft_memccpy("", srcccpy, 'z', 0);
+	printf("%s\n", r2);
+/*
 	// MEMMOVE (revisado)
 	printf("05 - ft_memmove:\n");
 	char dstmv[] = "hola";
@@ -65,7 +65,7 @@ int		main(void)
 	//int a = strlen(lenstr);
 	int a = ft_strlen(lenstr);
 	printf("%d", a);
-*/
+
 	// ISALPHA revisar esta mal!!!!
 	printf("09 - ft_isalpha:\n");
 	int c = 'a';
@@ -73,7 +73,7 @@ int		main(void)
 	int a = ft_isalpha(c);
 	printf("%d", a);
 
-/*
+
 	// ISDIGIT revisar!!!!
 	printf("10 - ft_isdigit:\n");
 	char digstr[] = "12345";

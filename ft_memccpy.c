@@ -6,7 +6,7 @@
 /*   By: mcarrete <mcarrete@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 20:18:57 by mcarrete          #+#    #+#             */
-/*   Updated: 2019/11/12 18:12:17 by mcarrete         ###   ########.fr       */
+/*   Updated: 2019/11/14 19:53:03 by mcarrete         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,28 @@
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	unsigned long	i;
-	unsigned char	value;
-	const char		*ptrsrc;
-	char			*ptrdst;
+	unsigned char			cchar;
+	unsigned char			*ptrsrc;
+	unsigned char			*ptrdst;
 
-	ptrsrc = src;
-	ptrdst = dst;
-	value = n;
-	i = 0;
-
-	while (i < n && ptrdst != 0)
+	ptrsrc = (unsigned char *)src;
+	ptrdst = (unsigned char *)dst;
+	cchar = (unsigned char)c;
+	if (ptrdst != NULL || ptrsrc != NULL)
 	{
-		ptrdst[i] = ptrsrc[i];
-		if (ptrsrc[i] == (char)c)  // cuando encuentra c para de copiar
-			break ;
-		i++;
+		while (*ptrsrc != cchar && n > 0)
+		{
+			*ptrdst = *ptrsrc;
+			ptrdst++;
+			ptrsrc++;
+			n--;
+		}
 	}
-	if (ptrsrc[i] == '\0')  //no ha encontrado c antes del final
-		return (NULL);  //si no encuentra c, returna null.
-	return (dst);  //si encuentra c manda la string hasta c (incluido)
+	if (*ptrsrc == cchar)
+	{
+		*ptrdst = *ptrsrc;
+		ptrdst++;
+		return (ptrdst);
+	}
+	return (NULL);
 }
