@@ -1,44 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcarrete <mcarrete@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/10 21:55:04 by mcarrete          #+#    #+#             */
-/*   Updated: 2019/11/15 19:15:26 by mcarrete         ###   ########.fr       */
+/*   Created: 2019/11/15 23:56:59 by mcarrete          #+#    #+#             */
+/*   Updated: 2019/11/16 00:17:25 by mcarrete         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(const char *str)
+int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int is_negative;
-	unsigned long digit;
-	int i;
+	unsigned long int i;
+
 
 	i = 0;
-	is_negative = 1;
-	digit = 0;
-	while (ft_isspace(str[i]) && str[i] != 0)
-		i++;
-	if (str[i] == '-')
+	if (n == 0)
 	{
-		is_negative = -1;
+		return (0);
+	}
+	while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0' && i < (n - 1))
+	{
 		i++;
 	}
-	while (str[i] != '\0')
-	{
-		if (ft_isdigit(str[i]))
-			digit = digit * 10 + (str[i] - '0');
-		else
-			break ;
-		i++;
-	}
-   if (i > 19 && is_negative > 0)
-       return (-1);
-   if (i > 19 && is_negative < 0)
-       return (0);
-	return ((int)digit * is_negative);
+	return (s1[i] - s2[i]);
+}
+
+int main()
+{
+	char *s1 = "\x12\xff\x65\x12\xbd\xde\xad";
+	char *s2 = "\x12\x02";
+	size_t size = 6;
+	int res1 = ft_strncmp(s1, s2, size);
+	printf("%d\n", res1);
 }
