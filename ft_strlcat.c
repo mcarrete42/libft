@@ -6,13 +6,13 @@
 /*   By: mcarrete <mcarrete@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/16 15:40:23 by mcarrete          #+#    #+#             */
-/*   Updated: 2019/11/16 18:20:56 by mcarrete         ###   ########.fr       */
+/*   Updated: 2019/11/17 16:13:03 by mcarrete         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char * dst, const char * src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t dstlen;
 	size_t srclen;
@@ -38,5 +38,3 @@ size_t	ft_strlcat(char * dst, const char * src, size_t dstsize)
 	dst[i] = '\0';
 	return (srclen + dstlen);
 }
-
-

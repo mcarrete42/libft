@@ -6,13 +6,13 @@
 /*   By: mcarrete <mcarrete@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 09:33:15 by mcarrete          #+#    #+#             */
-/*   Updated: 2019/11/12 18:59:54 by mcarrete         ###   ########.fr       */
+/*   Updated: 2019/11/17 11:09:57 by mcarrete         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int     ft_isprint(int c)
+int		ft_isprint(int c)
 {
-    return (c > 31 && c < 127);
+	return (c > 31 && c < 127);
 }

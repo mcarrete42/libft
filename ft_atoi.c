@@ -6,7 +6,7 @@
 /*   By: mcarrete <mcarrete@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/10 21:55:04 by mcarrete          #+#    #+#             */
-/*   Updated: 2019/11/15 19:15:26 by mcarrete         ###   ########.fr       */
+/*   Updated: 2019/11/17 12:25:17 by mcarrete         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,18 @@
 
 int		ft_atoi(const char *str)
 {
-	int is_negative;
-	unsigned long digit;
-	int i;
+	int				is_negative;
+	unsigned long	digit;
+	int				i;
 
 	i = 0;
 	is_negative = 1;
 	digit = 0;
 	while (ft_isspace(str[i]) && str[i] != 0)
 		i++;
-	if (str[i] == '-')
-	{
-		is_negative = -1;
+	is_negative = (str[i] == '-' ? -1 : 1);
+	if (is_negative == -1)
 		i++;
-	}
 	while (str[i] != '\0')
 	{
 		if (ft_isdigit(str[i]))
@@ -36,9 +34,9 @@ int		ft_atoi(const char *str)
 			break ;
 		i++;
 	}
-   if (i > 19 && is_negative > 0)
-       return (-1);
-   if (i > 19 && is_negative < 0)
-       return (0);
+	if (i > 19 && is_negative > 0)
+		return (-1);
+	if (i > 19 && is_negative < 0)
+		return (0);
 	return ((int)digit * is_negative);
 }
