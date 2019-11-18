@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcarrete <mcarrete@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/15 19:17:27 by mcarrete          #+#    #+#             */
-/*   Updated: 2019/11/18 17:53:06 by mcarrete         ###   ########.fr       */
+/*   Created: 2019/11/18 20:24:25 by mcarrete          #+#    #+#             */
+/*   Updated: 2019/11/18 20:39:34 by mcarrete         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	*ft_memchr(const void *s, int c, size_t n)
+char *ft_strtrim(char const *s1, char const *set)
 {
-	while (n != 0)
-	{
-		if (*((unsigned char *)s) == (unsigned char)c)
-			return ((void *)s);
-		s++;
-		n--;
-	}
-	return (NULL);
+
+}
+
+int     main()
+{
+    char *s = "hola que tal";
+    int start = 5;
+    size_t len = 12;
+    char *s2 = ft_substr(s, start, len);
+    printf("Original String: %s\nNew String: %s", s, s2);
 }
