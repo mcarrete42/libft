@@ -6,16 +6,16 @@
 /*   By: mcarrete <mcarrete@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/18 20:24:25 by mcarrete          #+#    #+#             */
-/*   Updated: 2019/11/20 21:41:39 by mcarrete         ###   ########.fr       */
+/*   Updated: 2019/11/21 18:55:43 by mcarrete         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		get_start(char const *s1, char const *set)
+static size_t		get_start(char const *s1, char const *set)
 {
-	int start;
-	int i;
+	size_t start;
+	size_t i;
 
 	start = 0;
 	while (s1[start] != 0)
@@ -30,10 +30,10 @@ static int		get_start(char const *s1, char const *set)
 	return (start);
 }
 
-static int		get_end(char const *s1, char const *set)
+static size_t		get_end(char const *s1, char const *set)
 {
-	int end;
-	int i;
+	size_t end;
+	size_t i;
 
 	end = ft_strlen(s1) - 1;
 	while (s1[end] != 0 && end >= 0)
@@ -48,38 +48,29 @@ static int		get_end(char const *s1, char const *set)
 	return (end);
 }
 
-/*
-static int		str_isspace(const char *s1)
-{
-	size_t i;
-
-	i = 0;
-	while (ft_isspace(s1[i]))
-		i++;
-	if (i == ft_strlen(s1) - 1)
-		return (1);
-	return (0);
-}
-*/
-
 char		*ft_strtrim(char const *s1, char const *set)
 {
-	int start;
-	int end;
-	int i;
+	size_t start;
+	size_t end;
+	size_t i;
 	char *s2;
-	int len_s2;
+	size_t len_s2;
 
 	if (s1 == NULL)
 		return (NULL);
-	start = get_start(s1, set);
-	end = get_end(s1, set);
+	start = (get_start(s1, set) < ft_strlen(s1) ? get_start(s1, set) : -1);
+	end = (get_end(s1, set) > start ? get_end(s1, set) : -1);
 	len_s2 = (end - start) + 2;
-	if(!(s2 = malloc(sizeof(char) * len_s2)))
+
+	if (!(s2 = malloc(sizeof(char) * len_s2)))
 		return (NULL);
-	ft_bzero(s2, len_s2);
-		i = 0;
-	while (i <= (len_s2 - 2))
+	i = 0;
+	if (end == (size_t)-1 || start == (size_t)-1)
+	{
+		s2[0] = '\0';
+		return (s2);
+	}
+	while (i <= ((len_s2) - 2))
 		{
 			s2[i] = s1[start];
 			i++;
@@ -88,14 +79,3 @@ char		*ft_strtrim(char const *s1, char const *set)
 	s2[i] = '\0';
 	return(s2);
 }
-
-/*
-int		main()
-{
-	char *s1 = "        ";
-	char *set = "";
-	char *s2 = ft_strtrim(s1, set);
-	int s1_len = ft_strlen(s1);
-	printf("s1_len: %d\nOriginal String: %s\nNew String: %s\n", s1_len, s1, s2);
-}
-*/

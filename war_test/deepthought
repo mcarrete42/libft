@@ -3,7 +3,7 @@ $> hostname; uname -msr
 Marinas-MacBook-Pro.local
 Darwin 19.0.0 x86_64
 $> date
-Wed Nov 20 21:15:56 CET 2019
+Thu Nov 21 18:53:13 CET 2019
 $> gcc --version
 Apple clang version 11.0.0 (clang-1100.0.33.12)
 Target: x86_64-apple-darwin19.0.0
@@ -60,7 +60,7 @@ gcc -Wall -Werror -Wextra -c ft_strtrim.c -o ft_strtrim.o
 ar rc libft.a ft_atoi.o ft_bzero.o ft_isalnum.o ft_isalpha.o ft_isascii.o ft_isdigit.o ft_islower.o ft_isprint.o ft_isupper.o ft_isspace.o ft_memchr.o ft_memccpy.o ft_memcpy.o ft_memcmp.o ft_memmove.o ft_memset.o ft_strncmp.o ft_strchr.o ft_strrchr.o ft_strlcat.o ft_strlcpy.o ft_strlen.o ft_strnstr.o ft_tolower.o ft_toupper.o ft_calloc.o ft_strdup.o ft_substr.o ft_strjoin.o ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_strtrim.o
 
 $> ls -la libft.a
--rw-r--r--  1 mcarrete  staff  31112 Nov 20 21:15 /Users/mcarrete/Documents/00-libft/libft/war_test/dirlibft/libft.a
+-rw-r--r--  1 mcarrete  staff  31304 Nov 21 18:53 /Users/mcarrete/Documents/00-libft/libft/war_test/dirlibft/libft.a
 
 = Part1_functions ==============================================================
 
