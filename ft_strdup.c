@@ -6,7 +6,7 @@
 /*   By: mcarrete <mcarrete@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/17 14:12:33 by mcarrete          #+#    #+#             */
-/*   Updated: 2019/11/17 14:34:10 by mcarrete         ###   ########.fr       */
+/*   Updated: 2019/11/22 19:49:25 by mcarrete         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strdup(const char *s1)
 	char	*s2;
 	size_t	i;
 
-	s2 = malloc(ft_strlen(s1) + 1);
+	s2 = (char *)malloc(ft_strlen(s1) + 1);
 	if (!s2)
 		return (NULL);
 	i = 0;

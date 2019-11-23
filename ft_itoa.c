@@ -6,79 +6,69 @@
 /*   By: mcarrete <mcarrete@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/19 18:27:18 by mcarrete          #+#    #+#             */
-/*   Updated: 2019/11/21 19:32:55 by mcarrete         ###   ########.fr       */
+/*   Updated: 2019/11/22 19:46:47 by mcarrete         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		ft_len_calc(size_t nb)
+static int			ft_len_calc(size_t nb)
 {
 	int i;
 
-	i = 0;
+ 	i = 0;
 	while (nb > 9)
 	{
 		nb = nb / 10;
 		i++;
 	}
 	i++;
-	printf("len_calc = %d\n", i);
 	return (i);
 }
 
-static char		*ft_reverse(char *c, int buff)
+static char			*ft_reverse(char *c, int buff)
 {
-	int i;
-	int j;
+	int		i;
+	int		j;
+	char	aux;
 
-	j = buff;
-	i = c[0] == '-' ? 1 : 0;
-	printf("Llega 03\n");
-	while (i < (buff + 1)/ 2)
+	j = buff - 2;
+	i = (c[0] == '-' ? 1 : 0);
+	while (i < (buff / 2))
 	{
+		aux = c[i];
 		c[i] = c[j];
-		c[j] = c[i];
+		c[j] = aux;
 		i++;
 		j--;
 	}
-	printf("My c = %s\n", c);
 	return(c);
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
-	size_t		nb;
-	char		*c;
-	int			buff;
+	char			*c;
+	int				buff;
+	int				is_negative;
+	unsigned int	nb;
+	int				i;
 
-	nb = n;
-	buff = ft_len_calc(nb);
-	if (!(c = malloc(sizeof(char) * buff + 1)))
+	is_negative = (n < 0 ? -1 : 1);
+	nb = (is_negative == -1 ? -n : n);
+	buff = (n < 0 ? ft_len_calc(nb) + 2 : ft_len_calc(nb) + 1);
+	if (!(c = (char *)malloc(sizeof(char) * buff)))
 		return (NULL);
-	if (nb < 0)
-	{
+	if (is_negative == -1)
 		c[0] = '-';
-		nb = -nb;
-	}
-	printf("Llega 02\n");
+	i = (is_negative == -1 ? 1 : 0);
 	while (nb > 9)
 	{
+		c[i] = nb % 10 + '0';
 		nb = nb / 10;
-		*c = nb % 10 + '0';
-		c++;
+		i++;
 	}
+	c[i++] = nb % 10 + '0';
+	c[i] = '\0';
 	ft_reverse(c, buff);
-	c[buff + 1] = 0;
 	return(c);
-
-
-}
-
-int		main()
-{
-	int n = 1234;
-	char *c;
-	c = ft_itoa(n);
-	printf("My numero: %d\nMy string: %s\n", n, c);
 }

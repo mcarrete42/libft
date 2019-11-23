@@ -6,7 +6,7 @@
 /*   By: mcarrete <mcarrete@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/18 20:24:25 by mcarrete          #+#    #+#             */
-/*   Updated: 2019/11/21 18:55:43 by mcarrete         ###   ########.fr       */
+/*   Updated: 2019/11/22 19:47:37 by mcarrete         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ char		*ft_strtrim(char const *s1, char const *set)
 	end = (get_end(s1, set) > start ? get_end(s1, set) : -1);
 	len_s2 = (end - start) + 2;
 
-	if (!(s2 = malloc(sizeof(char) * len_s2)))
+	if (!(s2 = (char *)malloc(sizeof(char) * len_s2)))
 		return (NULL);
 	i = 0;
 	if (end == (size_t)-1 || start == (size_t)-1)
