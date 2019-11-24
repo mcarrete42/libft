@@ -6,7 +6,7 @@
 #    By: mcarrete <mcarrete@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/20 21:36:15 by mcarrete          #+#    #+#              #
-#    Updated: 2019/11/24 12:46:35 by mcarrete         ###   ########.fr        #
+#    Updated: 2019/11/24 18:44:40 by mcarrete         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ SRC 		= ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c  \
 	ft_strnstr.c ft_tolower.c ft_toupper.c ft_calloc.c ft_strdup.c \
 	\
 	ft_substr.c ft_strjoin.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c \
-	ft_putnbr_fd.c ft_strtrim.c ft_itoa.c ft_strmapi.c 
+	ft_putnbr_fd.c ft_strtrim.c ft_itoa.c ft_strmapi.c ft_split.c
 OBJ 		= ${SRC:.c=.o}
 NAME 		= libft.a
 LIB			= libft.h
