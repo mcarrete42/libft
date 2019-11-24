@@ -6,7 +6,7 @@
 /*   By: mcarrete <mcarrete@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/19 18:27:18 by mcarrete          #+#    #+#             */
-/*   Updated: 2019/11/22 19:46:47 by mcarrete         ###   ########.fr       */
+/*   Updated: 2019/11/24 11:34:33 by mcarrete         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static int			ft_len_calc(size_t nb)
 {
 	int i;
 
- 	i = 0;
+	i = 0;
 	while (nb > 9)
 	{
 		nb = nb / 10;
@@ -42,10 +42,10 @@ static char			*ft_reverse(char *c, int buff)
 		i++;
 		j--;
 	}
-	return(c);
+	return (c);
 }
 
-char		*ft_itoa(int n)
+char				*ft_itoa(int n)
 {
 	char			*c;
 	int				buff;
@@ -70,5 +70,5 @@ char		*ft_itoa(int n)
 	c[i++] = nb % 10 + '0';
 	c[i] = '\0';
 	ft_reverse(c, buff);
-	return(c);
+	return (c);
 }
