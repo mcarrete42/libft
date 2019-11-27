@@ -3,7 +3,7 @@ $> hostname; uname -msr
 Marinas-MacBook-Pro.local
 Darwin 19.0.0 x86_64
 $> date
-Tue Nov 26 22:16:31 CET 2019
+Wed Nov 27 21:32:37 CET 2019
 $> gcc --version
 Apple clang version 11.0.0 (clang-1100.0.33.12)
 Target: x86_64-apple-darwin19.0.0
@@ -21,76 +21,200 @@ norminette : command not found
 
 = Compiling libft ==============================================================
 $> make re
-rm -f ft_atoi.o ft_bzero.o ft_isalnum.o ft_isalpha.o ft_isascii.o ft_isdigit.o ft_islower.o ft_isprint.o ft_isupper.o ft_isspace.o ft_memchr.o ft_memccpy.o ft_memcpy.o ft_memcmp.o ft_memmove.o ft_memset.o ft_strncmp.o ft_strchr.o ft_strrchr.o ft_strlcat.o ft_strlcpy.o ft_strlen.o ft_strnstr.o ft_tolower.o ft_toupper.o ft_calloc.o ft_strdup.o ft_substr.o ft_strjoin.o ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_strtrim.o ft_itoa.o ft_strmapi.o ft_split.o ft_lstnew_bonus.o ft_lstadd_front_bonus.o ft_lstsize_bonus.o ft_lstlast_bonuc.o
-rm -f libft.a
-gcc -Wall -Werror -Wextra -c ft_atoi.c -o ft_atoi.o
-gcc -Wall -Werror -Wextra -c ft_bzero.c -o ft_bzero.o
-gcc -Wall -Werror -Wextra -c ft_isalnum.c -o ft_isalnum.o
-gcc -Wall -Werror -Wextra -c ft_isalpha.c -o ft_isalpha.o
-gcc -Wall -Werror -Wextra -c ft_isascii.c -o ft_isascii.o
-gcc -Wall -Werror -Wextra -c ft_isdigit.c -o ft_isdigit.o
-gcc -Wall -Werror -Wextra -c ft_islower.c -o ft_islower.o
-gcc -Wall -Werror -Wextra -c ft_isprint.c -o ft_isprint.o
-gcc -Wall -Werror -Wextra -c ft_isupper.c -o ft_isupper.o
-gcc -Wall -Werror -Wextra -c ft_isspace.c -o ft_isspace.o
-gcc -Wall -Werror -Wextra -c ft_memchr.c -o ft_memchr.o
-gcc -Wall -Werror -Wextra -c ft_memccpy.c -o ft_memccpy.o
-gcc -Wall -Werror -Wextra -c ft_memcpy.c -o ft_memcpy.o
-gcc -Wall -Werror -Wextra -c ft_memcmp.c -o ft_memcmp.o
-gcc -Wall -Werror -Wextra -c ft_memmove.c -o ft_memmove.o
-gcc -Wall -Werror -Wextra -c ft_memset.c -o ft_memset.o
-gcc -Wall -Werror -Wextra -c ft_strncmp.c -o ft_strncmp.o
-gcc -Wall -Werror -Wextra -c ft_strchr.c -o ft_strchr.o
-gcc -Wall -Werror -Wextra -c ft_strrchr.c -o ft_strrchr.o
-gcc -Wall -Werror -Wextra -c ft_strlcat.c -o ft_strlcat.o
-gcc -Wall -Werror -Wextra -c ft_strlcpy.c -o ft_strlcpy.o
-gcc -Wall -Werror -Wextra -c ft_strlen.c -o ft_strlen.o
-gcc -Wall -Werror -Wextra -c ft_strnstr.c -o ft_strnstr.o
-gcc -Wall -Werror -Wextra -c ft_tolower.c -o ft_tolower.o
-gcc -Wall -Werror -Wextra -c ft_toupper.c -o ft_toupper.o
-gcc -Wall -Werror -Wextra -c ft_calloc.c -o ft_calloc.o
-gcc -Wall -Werror -Wextra -c ft_strdup.c -o ft_strdup.o
-gcc -Wall -Werror -Wextra -c ft_substr.c -o ft_substr.o
-gcc -Wall -Werror -Wextra -c ft_strjoin.c -o ft_strjoin.o
-gcc -Wall -Werror -Wextra -c ft_putchar_fd.c -o ft_putchar_fd.o
-gcc -Wall -Werror -Wextra -c ft_putstr_fd.c -o ft_putstr_fd.o
-gcc -Wall -Werror -Wextra -c ft_putendl_fd.c -o ft_putendl_fd.o
-gcc -Wall -Werror -Wextra -c ft_putnbr_fd.c -o ft_putnbr_fd.o
-gcc -Wall -Werror -Wextra -c ft_strtrim.c -o ft_strtrim.o
-gcc -Wall -Werror -Wextra -c ft_itoa.c -o ft_itoa.o
-gcc -Wall -Werror -Wextra -c ft_strmapi.c -o ft_strmapi.o
-gcc -Wall -Werror -Wextra -c ft_split.c -o ft_split.o
-gcc -Wall -Werror -Wextra libft.h -c ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_islower.c ft_isprint.c ft_isupper.c ft_isspace.c ft_memchr.c ft_memccpy.c ft_memcpy.c ft_memcmp.c ft_memmove.c ft_memset.c ft_strncmp.c ft_strchr.c ft_strrchr.c ft_strlcat.c ft_strlcpy.c ft_strlen.c ft_strnstr.c ft_tolower.c ft_toupper.c ft_calloc.c ft_strdup.c ft_substr.c ft_strjoin.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_strtrim.c ft_itoa.c ft_strmapi.c ft_split.c
-ar rcs libft.a ft_atoi.o ft_bzero.o ft_isalnum.o ft_isalpha.o ft_isascii.o ft_isdigit.o ft_islower.o ft_isprint.o ft_isupper.o ft_isspace.o ft_memchr.o ft_memccpy.o ft_memcpy.o ft_memcmp.o ft_memmove.o ft_memset.o ft_strncmp.o ft_strchr.o ft_strrchr.o ft_strlcat.o ft_strlcpy.o ft_strlen.o ft_strnstr.o ft_tolower.o ft_toupper.o ft_calloc.o ft_strdup.o ft_substr.o ft_strjoin.o ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_strtrim.o ft_itoa.o ft_strmapi.o ft_split.o
+cc -Wall -Wextra -Werror   -c -o ft_isalnum.o ft_isalnum.c
+cc -Wall -Wextra -Werror   -c -o ft_isdigit.o ft_isdigit.c
+cc -Wall -Wextra -Werror   -c -o ft_memchr.o ft_memchr.c
+cc -Wall -Wextra -Werror   -c -o ft_memmove.o ft_memmove.c
+cc -Wall -Wextra -Werror   -c -o ft_strlcat.o ft_strlcat.c
+cc -Wall -Wextra -Werror   -c -o ft_strnstr.o ft_strnstr.c
+cc -Wall -Wextra -Werror   -c -o ft_tolower.o ft_tolower.c
+cc -Wall -Wextra -Werror   -c -o ft_atoi.o ft_atoi.c
+cc -Wall -Wextra -Werror   -c -o ft_isalpha.o ft_isalpha.c
+cc -Wall -Wextra -Werror   -c -o ft_isprint.o ft_isprint.c
+cc -Wall -Wextra -Werror   -c -o ft_memcmp.o ft_memcmp.c
+cc -Wall -Wextra -Werror   -c -o ft_memset.o ft_memset.c
+cc -Wall -Wextra -Werror   -c -o ft_strlcpy.o ft_strlcpy.c
+cc -Wall -Wextra -Werror   -c -o ft_toupper.o ft_toupper.c
+cc -Wall -Wextra -Werror   -c -o ft_bzero.o ft_bzero.c
+cc -Wall -Wextra -Werror   -c -o ft_isascii.o ft_isascii.c
+cc -Wall -Wextra -Werror   -c -o ft_memccpy.o ft_memccpy.c
+cc -Wall -Wextra -Werror   -c -o ft_memcpy.o ft_memcpy.c
+cc -Wall -Wextra -Werror   -c -o ft_strchr.o ft_strchr.c
+cc -Wall -Wextra -Werror   -c -o ft_strlen.o ft_strlen.c
+cc -Wall -Wextra -Werror   -c -o ft_strrchr.o ft_strrchr.c
+cc -Wall -Wextra -Werror   -c -o ft_strncmp.o ft_strncmp.c
+cc -Wall -Wextra -Werror   -c -o ft_calloc.o ft_calloc.c
+cc -Wall -Wextra -Werror   -c -o ft_strdup.o ft_strdup.c
+cc -Wall -Wextra -Werror   -c -o ft_substr.o ft_substr.c
+cc -Wall -Wextra -Werror   -c -o ft_strjoin.o ft_strjoin.c
+cc -Wall -Wextra -Werror   -c -o ft_strtrim.o ft_strtrim.c
+cc -Wall -Wextra -Werror   -c -o ft_split.o ft_split.c
+cc -Wall -Wextra -Werror   -c -o ft_itoa.o ft_itoa.c
+cc -Wall -Wextra -Werror   -c -o ft_strmapi.o ft_strmapi.c
+cc -Wall -Wextra -Werror   -c -o ft_putchar_fd.o ft_putchar_fd.c
+cc -Wall -Wextra -Werror   -c -o ft_putstr_fd.o ft_putstr_fd.c
+cc -Wall -Wextra -Werror   -c -o ft_putendl_fd.o ft_putendl_fd.c
+cc -Wall -Wextra -Werror   -c -o ft_putnbr_fd.o ft_putnbr_fd.c
+cc -Wall -Wextra -Werror   -c -o ft_isspace.o ft_isspace.c
+cc -Wall -Wextra -Werror   -c -o ft_isupper.o ft_isupper.c
+cc -Wall -Wextra -Werror   -c -o ft_islower.o ft_islower.c
+cc -Wall -Wextra -Werror   -c -o ft_strcpy.o ft_strcpy.c
+cc -Wall -Wextra -Werror   -c -o ft_strncpy.o ft_strncpy.c
+cc -Wall -Wextra -Werror   -c -o ft_strcapitalize.o ft_strcapitalize.c
+cc -Wall -Wextra -Werror   -c -o ft_strcat.o ft_strcat.c
+cc -Wall -Wextra -Werror   -c -o ft_strncat.o ft_strncat.c
+cc -Wall -Wextra -Werror   -c -o ft_strstr.o ft_strstr.c
+cc -Wall -Wextra -Werror   -c -o ft_super_atoi.o ft_super_atoi.c
+cc -Wall -Wextra -Werror -I./ -c ft_isalnum.c ft_isdigit.c ft_memchr.c	ft_memmove.c ft_strlcat.c ft_strnstr.c ft_tolower.c ft_atoi.c ft_isalpha.c ft_isprint.c ft_memcmp.c ft_memset.c ft_strlcpy.c ft_toupper.c ft_bzero.c ft_isascii.c ft_memccpy.c ft_memcpy.c ft_strchr.c ft_strlen.c ft_strrchr.c ft_strncmp.c ft_calloc.c ft_strdup.c ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_isspace.c ft_isupper.c ft_islower.c ft_strcpy.c ft_strncpy.c ft_strcapitalize.c ft_strcat.c ft_strncat.c ft_strstr.c ft_super_atoi.c
+ar -rcs libft.a ft_isalnum.o ft_isdigit.o ft_memchr.o ft_memmove.o ft_strlcat.o ft_strnstr.o ft_tolower.o ft_atoi.o ft_isalpha.o ft_isprint.o ft_memcmp.o ft_memset.o ft_strlcpy.o ft_toupper.o ft_bzero.o ft_isascii.o ft_memccpy.o ft_memcpy.o ft_strchr.o ft_strlen.o ft_strrchr.o ft_strncmp.o ft_calloc.o ft_strdup.o ft_substr.o ft_strjoin.o ft_strtrim.o ft_split.o ft_itoa.o ft_strmapi.o ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_isspace.o ft_isupper.o ft_islower.o ft_strcpy.o ft_strncpy.o ft_strcapitalize.o ft_strcat.o ft_strncat.o ft_strstr.o ft_super_atoi.o
 
 $> ls -la libft.a
--rw-r--r--  1 mcarrete  staff  35568 Nov 26 22:16 /Users/mcarrete/Documents/00-libft/libft/war_test/dirlibft/libft.a
+-rw-r--r--  1 mcarrete  staff  42336 Nov 27 21:32 /Users/mcarrete/Documents/00-libft/libft/war_test/dirlibft/libft.a
 
-= Bonus_functions ==============================================================
+= Additional_functions =========================================================
 
-= ft_lstnew.c ==================================================================
-Nothing turned in
+= ft_islower.c =================================================================
+$> norminette ft_islower.c | grep -E '(Error|Warning)'
 
-= ft_lstdelone.c ===============================================================
-Nothing turned in
+norminette : command not found
 
-= ft_lstclear.c ================================================================
-Nothing turned in
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_islower.c main.c libft.a -o user_exe
 
-= ft_lstadd_front.c ============================================================
-Nothing turned in
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
 
-= ft_lstadd_back.c =============================================================
-Nothing turned in
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
 
-= ft_lstsize.c =================================================================
-Nothing turned in
+Diff OK :D
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
 
-= ft_lstiter.c =================================================================
-Nothing turned in
+Diff OK :D
+= Test 4 ===================================================
+$> ./user_exe 04
+$> diff -U 3 user_output_test04 test04.output
 
-= ft_lstmap.c ==================================================================
-Nothing turned in
+Diff OK :D
+= Test 5 ===================================================
+$> ./user_exe 05
+$> diff -U 3 user_output_test05 test05.output
 
-= ft_lstlast.c =================================================================
-Nothing turned in
+Diff OK :D
+= Test 6 ===================================================
+$> ./user_exe 06
+$> diff -U 3 user_output_test06 test06.output
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./user_exe 07
+$> diff -U 3 user_output_test07 test07.output
+
+Diff OK :D
+
+= ft_isspace.c =================================================================
+$> norminette ft_isspace.c | grep -E '(Error|Warning)'
+
+norminette : command not found
+
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_isspace.c main.c libft.a -o user_exe
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./user_exe 04
+$> diff -U 3 user_output_test04 test04.output
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./user_exe 05
+$> diff -U 3 user_output_test05 test05.output
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./user_exe 06
+$> diff -U 3 user_output_test06 test06.output
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./user_exe 07
+$> diff -U 3 user_output_test07 test07.output
+
+Diff OK :D
+
+= ft_isupper.c =================================================================
+$> norminette ft_isupper.c | grep -E '(Error|Warning)'
+
+norminette : command not found
+
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_isupper.c main.c libft.a -o user_exe
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./user_exe 04
+$> diff -U 3 user_output_test04 test04.output
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./user_exe 05
+$> diff -U 3 user_output_test05 test05.output
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./user_exe 06
+$> diff -U 3 user_output_test06 test06.output
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./user_exe 07
+$> diff -U 3 user_output_test07 test07.output
+
+Diff OK :D
+
+= ft_strcapitalize.c ===========================================================
+$> norminette ft_strcapitalize.c | grep -E '(Error|Warning)'
+
+norminette : command not found
+
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strcapitalize.c main.c libft.a -o user_exe
+
+= Test 1 ===================================================
+$> ./user_exe 01
+Command './user_exe 01' got killed by an Abort
+= Test 2 ===================================================
+$> ./user_exe 02
+Command './user_exe 02' got killed by an Abort
+= Test 3 ===================================================
+$> ./user_exe 03
+Command './user_exe 03' got killed by an Abort
